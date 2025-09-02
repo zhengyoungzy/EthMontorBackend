@@ -2,7 +2,6 @@ import { ethers } from 'ethers';
 import app from './app.js';
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
-console.log(process.env.RPC_URL);
 app.get("/latest-block", async (req, res) => {
     try {
         const block = await provider.getBlock("latest");

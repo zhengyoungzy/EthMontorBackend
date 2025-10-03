@@ -1,8 +1,8 @@
 import { Router } from "express";
 import provider from "../config/provider.js";
 
-const router = Router();
-router.get("/latest-block", async (_req, res) => {
+const blockRouter = Router();
+blockRouter.get("/", async (_req, res) => {
     try {
         const block = await provider.getBlock("latest");
         res.json(block);
@@ -11,4 +11,4 @@ router.get("/latest-block", async (_req, res) => {
     }
 });
 
-export default router;
+export default blockRouter;

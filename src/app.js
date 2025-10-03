@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/latest-block", gasRoutes);
+app.use("/latest-block", gasRoutes);
 // Root route
 app.get("/", (req, res) => {
     res.json({ message: "Ethereum Monitor Backend is running 🚀" });
